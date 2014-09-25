@@ -248,22 +248,22 @@
     */
     controls: {
       rewind: {
-        label: "《",
+        label: "&#x300A;", 
         title: "First"
-      },
+      }, 
       back: {
-        label: "〈",
+        label: "&#x3008;", 
         title: "Previous"
       },
       forward: {
-        label: "〉",
+        label: "&#x3009;", 
         title: "Next"
       },
       fastForward: {
-        label: "》",
+        label: "&#x300B;", 
         title: "Last"
       }
-    },
+    }
 
     /** @property */
     renderIndexedPageHandles: true,
