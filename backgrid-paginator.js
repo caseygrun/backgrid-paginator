@@ -263,7 +263,7 @@
         label: "&#x300B;", 
         title: "Last"
       }
-    }
+    },
 
     /** @property */
     renderIndexedPageHandles: true,
