@@ -295,10 +295,11 @@
                             "slideScale", "goBackFirstOnSort",
                             "renderIndexedPageHandles"));
 
+      self.deferredRender = _.debounce(_.bind(self.render, self), 1000)
       var col = self.collection;
-      self.listenTo(col, "add", self.render);
-      self.listenTo(col, "remove", self.render);
-      self.listenTo(col, "reset", self.render);
+      self.listenTo(col, "add", self.deferredRender);
+      self.listenTo(col, "remove", self.deferredRender);
+      self.listenTo(col, "reset", self.deferredRender);
       self.listenTo(col, "backgrid:sorted", function () {
         if (self.goBackFirstOnSort) col.getFirstPage({reset: true});
       });
